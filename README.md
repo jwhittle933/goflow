@@ -88,5 +88,15 @@ func main() {
 ### Links
 [Understanding TensorFlow and Go](https://pgaleone.eu/tensorflow/go/2017/05/29/understanding-tensorflow-using-go/) ||
 [TensorFlow + Go, the gopher way](https://github.com/galeone/tfgo) ||
-[TensorFlow Golang Package](https://godoc.org/github.com/tensorflow/tensorflow/tensorflow/go)
+[TensorFlow Golang Package](https://godoc.org/github.com/tensorflow/tensorflow/tensorflow/go) ||
+[Enable TensorBoard for TensorFlow Go API](https://github.com/helinwang/tfsum)
 
+### Notes
+* [Understanding TensorFlow and Go](https://pgaleone.eu/tensorflow/go/2017/05/29/understanding-tensorflow-using-go/) 
+  * A node is completely identified by the Scope in which it is defined.
+  * The scope is the path that we have to follow from the root of the graph to reach the node.
+  * There are 2 ways of defining nodes that execute the same operation: 
+    * Define the operation in a different Scope (Go style)
+    * or change the operation name (how Python automatically does or how we can do in C++)
+  * The Go bindings have their own set of types, with a 1:1 mapping (almost complete) with the Go types
+  * When we feed values into the graph we have to respect the mapping (for instance feed `int32` when defining `tf.Int32` placeholders). The same has to be done when fetching values from the graph.
