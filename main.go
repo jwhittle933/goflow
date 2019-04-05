@@ -12,6 +12,7 @@ func main() {
 
 	A := op.Placeholder(root.SubScope("input"), tf.Int64, op.PlaceholderShape(tf.MakeShape(2, 2)))
 	x := op.Placeholder(root.SubScope("input"), tf.Int64, op.PlaceholderShape(tf.MakeShape(2, 1)))
+	fmt.Println(A.Op.Name(), x.Op.Name())
 
 	product := op.MatMul(root, A, x)
 

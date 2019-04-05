@@ -26,7 +26,8 @@ func main() {
 
 	// Define the 2 placeholders
 	A := op.Placeholder(root.SubScope("input"), tf.Int64, op.PlaceholderShape(tf.MakeShape(2, 2)))
-	x := op.Placeholder(root.SubScope("input"), tf.Int64, op.PlaceholderShape(tf.MakeShape(2, 1)))
+  x := op.Placeholder(root.SubScope("input"), tf.Int64, op.PlaceholderShape(tf.MakeShape(2, 1)))
+  fmt.Println(A.Op.Name(), x.Op.Name())
 
 	// Define the operation node that accepts A & x as inputs
 	product := op.MatMul(root, A, x)
