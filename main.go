@@ -10,8 +10,8 @@ import (
 func main() {
 	root := op.NewScope()
 
-	A := op.Placeholder(root, tf.Int64, op.PlaceholderShape(tf.MakeShape(2, 2)))
-	x := op.Placeholder(root, tf.Int64, op.PlaceholderShape(tf.MakeShape(2, 1)))
+	A := op.Placeholder(root.SubScope("input"), tf.Int64, op.PlaceholderShape(tf.MakeShape(2, 2)))
+	x := op.Placeholder(root.SubScope("input"), tf.Int64, op.PlaceholderShape(tf.MakeShape(2, 1)))
 
 	product := op.MatMul(root, A, x)
 
@@ -44,7 +44,7 @@ func main() {
 	}
 
 	for _, result := range results {
-		fmt.Println(result.Value().([][]int64))
+		fmt.Println("Result: ", result.Value().([][]int64))
 	}
 
 }
