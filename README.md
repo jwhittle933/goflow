@@ -89,7 +89,8 @@ func main() {
 [Understanding TensorFlow and Go](https://pgaleone.eu/tensorflow/go/2017/05/29/understanding-tensorflow-using-go/) ||
 [TensorFlow + Go, the gopher way](https://github.com/galeone/tfgo) ||
 [TensorFlow Golang Package](https://godoc.org/github.com/tensorflow/tensorflow/tensorflow/go) ||
-[Enable TensorBoard for TensorFlow Go API](https://github.com/helinwang/tfsum)
+[Enable TensorBoard for TensorFlow Go API](https://github.com/helinwang/tfsum) || 
+[GoTensor](https://github.com/helinwang/gotensor)
 
 ### Notes
 * [Understanding TensorFlow and Go](https://pgaleone.eu/tensorflow/go/2017/05/29/understanding-tensorflow-using-go/) 
